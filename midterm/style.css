@@ -75,3 +75,5 @@
     align-self: start;
   }
 }
+/* ---------- Task 3: hidden by search ---------- */
+.no-match { display: none !important; }
