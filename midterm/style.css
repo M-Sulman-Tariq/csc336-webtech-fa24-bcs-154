@@ -25,3 +25,25 @@
   text-decoration: none;
   color: inherit;
 }
+/* Task 1: CSS-only filter */
+#filter input[type="radio"] { display: none; }
+
+#filter label {
+  padding: 6px 16px;
+  margin: 0 4px 16px 0;
+  border: 1px solid #999;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#filter input:checked + label {
+  background: hsl(18, 70%, 45%);
+  border-color: hsl(18, 70%, 45%);
+  color: #fff;
+}
+
+#audio:checked ~ #grid .col:not(.audio),
+#wear:checked  ~ #grid .col:not(.wear),
+#shoes:checked ~ #grid .col:not(.shoes) {
+  display: none;
+}

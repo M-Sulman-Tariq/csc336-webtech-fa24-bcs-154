@@ -62,129 +62,145 @@
   <!-- Product grid -->
   <main class="container my-5">
     <h2 class="fw-bold mb-4">Top Picks</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p1.jpg" class="card-img-top" alt="Headphones">
-            <span class="badge bg-dark rounded-0 position-absolute top-0 start-0 m-2">New In</span>
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">ShopFast</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Wireless Headphones</a></h5>
-            <p class="card-text">£49.99</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+    <!-- Task 3: search box -->
+    <input type="search" id="search" class="form-control mb-3" placeholder="Search products...">
+
+    <!-- Task 1: category filter (radios must come before the grid) -->
+    <div id="filter">
+      <input type="radio" name="cat" id="all" checked><label for="all">All</label>
+      <input type="radio" name="cat" id="audio"><label for="audio">Audio</label>
+      <input type="radio" name="cat" id="wear"><label for="wear">Wearables</label>
+      <input type="radio" name="cat" id="shoes"><label for="shoes">Shoes</label>
+
+      <button id="sort" class="btn btn-outline-dark btn-sm ms-2">Sort by price</button>
+
+      <p id="empty" class="text-center my-5 d-none">No products found</p>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="grid">
+
+        <div class="col audio">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p1.jpg" class="card-img-top" alt="Headphones">
+              <span class="badge bg-dark rounded-0 position-absolute top-0 start-0 m-2">New In</span>
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">ShopFast</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Wireless Headphones</a></h5>
+              <p class="card-text">£49.99</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p2.jpg" class="card-img-top" alt="Running Shoes">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Nike</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Free Flyknit Running Shoes</a></h5>
-            <p class="card-text">£175.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col shoes">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p2.jpg" class="card-img-top" alt="Running Shoes">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Nike</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Free Flyknit Running Shoes</a></h5>
+              <p class="card-text">£175.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p3.jpg" class="card-img-top" alt="Smart Watch">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">ShopFast</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Smart Watch</a></h5>
-            <p class="card-text">£95.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col wear">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p3.jpg" class="card-img-top" alt="Smart Watch">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">ShopFast</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Smart Watch</a></h5>
+              <p class="card-text">£5,999.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p4.jpg" class="card-img-top" alt="Sunglasses">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Ray-Ban</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">New Wayfarer Sunglasses</a></h5>
-            <p class="card-text">£120.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col wear">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p4.jpg" class="card-img-top" alt="Sunglasses">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Ray-Ban</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">New Wayfarer Sunglasses</a></h5>
+              <p class="card-text">£120.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p1.jpg" class="card-img-top" alt="Product 5">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Brand</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 5</a></h5>
-            <p class="card-text">£60.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col audio">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p5.jpg" class="card-img-top" alt="Product 5">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Brand</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 5</a></h5>
+              <p class="card-text">£60.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p2.jpg" class="card-img-top" alt="Product 6">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Brand</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 6</a></h5>
-            <p class="card-text">£185.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col shoes">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p6.jpg" class="card-img-top" alt="Product 6">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Brand</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 6</a></h5>
+              <p class="card-text">£185.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p4.jpg" class="card-img-top" alt="Product 7">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Brand</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 7</a></h5>
-            <p class="card-text">£75.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col wear">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p7.jpg" class="card-img-top" alt="Product 7">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Brand</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 7</a></h5>
+              <p class="card-text">£75.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card border-0 h-100">
-          <div class="position-relative">
-            <img src="p3.jpg" class="card-img-top" alt="Product 8">
-            <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
-          </div>
-          <div class="card-body px-0">
-            <p class="small text-muted mb-1">Brand</p>
-            <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 8</a></h5>
-            <p class="card-text">£140.00</p>
-            <button class="btn btn-dark rounded-pill">Add to Cart</button>
+        <div class="col wear">
+          <div class="card border-0 h-100">
+            <div class="position-relative">
+              <img src="p8.jpg" class="card-img-top" alt="Product 8">
+              <span class="position-absolute top-0 end-0 m-2 fs-5">♡</span>
+            </div>
+            <div class="card-body px-0">
+              <p class="small text-muted mb-1">Brand</p>
+              <h5 class="card-title fs-6 fw-bold"><a href="product.html">Product 8</a></h5>
+              <p class="card-text">£140.00</p>
+              <button class="btn btn-dark rounded-pill">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </main>
 
@@ -210,5 +226,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
