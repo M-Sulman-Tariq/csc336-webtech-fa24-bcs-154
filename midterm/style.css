@@ -1,0 +1,27 @@
+.announcement {
+  background-color: #ff4f00;
+  font-size: 0.85rem;
+}
+
+.logo {
+  color: #ff4f00;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero {
+  background-color: #425572;
+}
+
+.card-img-top {
+  height: 240px;
+  object-fit: cover;
+  background-color: #eee;
+  border-radius: 0;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: inherit;
+}
