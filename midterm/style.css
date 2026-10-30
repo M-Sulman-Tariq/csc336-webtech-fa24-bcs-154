@@ -25,7 +25,8 @@
   text-decoration: none;
   color: inherit;
 }
-/* Task 1: CSS-only filter */
+
+/* ---------- Task 1: CSS-only category filter ---------- */
 #filter input[type="radio"] { display: none; }
 
 #filter label {
@@ -46,4 +47,31 @@
 #wear:checked  ~ #grid .col:not(.wear),
 #shoes:checked ~ #grid .col:not(.shoes) {
   display: none;
+}
+
+/* ---------- Task 2: product page grid + sticky box ---------- */
+.product-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-areas:
+    "image"
+    "details"
+    "desc";
+}
+.pimg     { grid-area: image; }
+.pdetails { grid-area: details; }
+.pdesc    { grid-area: desc; }
+
+@media (min-width: 654px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image details"
+      "desc  desc";
+  }
+  .pdetails {
+    position: sticky;
+    top: 84px;
+    align-self: start;
+  }
 }
